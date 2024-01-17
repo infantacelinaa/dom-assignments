@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table>
+        
+      <tr>
+          <td>1st Number</td>
+          <td>:</td>
+          <td> <input id="firstNumber" ></td>
+     </tr>
+        <td>2nd Number</td> 
+        <td>:</td>
+        <td><input id="secondNumber" ></td>
+     </tr>
+     <tr><br></tr>
+     <tr>
+        <td><button onclick="multiplyBy()">Multiply</button>
+        <button onclick="divideBy()">Divide</button></td>
+       
+    </tr>
+    </table>
+    </form>
+    <p>The Result is:<br>
+    <span id="result">values</span>
+    </p>
+    <script>
+        var box1 = document.getElementById("firstNumber");
+        var box2 = document.getElementById("secondNumber");
+        var result = document.getElementById("result");
+        function multiplyBy(){
+        var box1value = Number(box1.value);
+        var box2value = Number(box2.value);
+        var total = box1value * box2value;
+        result.textContent = total;
+        }
+        function divideBy(){
+        var box1value = Number(box1.value);
+        var box2value = Number(box2.value);
+        var total = box1value / box2value;
+        result.textContent = total;
+        }
+
+    </script>
+</body>
+</html>

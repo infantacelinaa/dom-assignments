@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit="returnvalidateForm()" method="post">
+        Name:<input type="text"id="text" name="fname">
+        <input type="submit" value="Submit">
+        <script>
+            function returnvalidateForm()
+            {
+                let a = document.forms["myForm"]["fname"].value;
+                if(a=="")
+                alert("Name should not be empty");
+                return false;
+            }
+        </script>
+    </form>
+</body>
+</html>
